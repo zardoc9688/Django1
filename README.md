@@ -1,1 +1,1 @@
-# Django1
+# django_ejemplo_clase
