@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block headers %}
+<title>Autores</title>
+{% endblock %}
+
+{% block content %}
+<div class="container lista">
+    <ul class="list-group">
+        {% for autor in autores %}
+        <li class="list-group-item">{{ autor.nombre }} &nbsp;<a href="{% url 'autor_view' autor.id %}" class="btn btn-sm btn-success">Detalles</a>&nbsp;<a href="{% url 'autor_actualizar' autor.id %}" class="btn btn-sm btn-warning">actualizar</a>&nbsp;<a href="{% url 'autor_eliminar' autor.id %}" class="btn btn-sm btn-danger">eliminar</a></li>
+        {% endfor %}
+    </ul>    
+</div>
+
+{% endblock %}
