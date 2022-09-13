@@ -1,6 +1,6 @@
 from django.db import models
-#equisde
-#Modelo para la entidad Autor. 
+
+# Create your models here.
 class Autor(models.Model):
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)

@@ -1,12 +1,12 @@
 from django.db import models
 
 from autores.models import Autor
-from categorias.models import Categoria
+from categorias.models import Categorias
 
-#Modelo para la entidad Libros
+# Create your models here.
 class Libro(models.Model):
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    categorias = models.ForeignKey(Categorias, on_delete=models.CASCADE)
     titulo = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=500)
     fecha_pub = models.DateTimeField()

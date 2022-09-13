@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+# Create your views here.
+from django.shortcuts import render
+
 #importar librerias
 from django.template import loader
 from django.http import HttpResponse, HttpResponseRedirect
